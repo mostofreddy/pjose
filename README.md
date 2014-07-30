@@ -3,6 +3,9 @@ PJOSE
 
 PHP library to implements JOSE (Javascript Object Signing and Encryption)
 
+[![Build Status](https://travis-ci.org/mostofreddy/pjose.svg?branch=master)](https://travis-ci.org/mostofreddy/pjose)
+
+
 Documentation for JSON Web Tokens
 ---------------------------------
 
