@@ -44,7 +44,7 @@ This tool can be installed via Composer:
 License
 =======
 
-The MIT License (MIT). Please see License File for more information.
+The MIT License (MIT). Please see [License File](https://github.com/mostofreddy/pjose/blob/master/LICENSE.md) for more information.
 
 How is it used?
 ===============
@@ -115,7 +115,7 @@ JWS
 Examples
 ========
 
-[Example directory]()
+[Example directory](https://github.com/mostofreddy/pjose/tree/master/examples)
 
 Run Tests
 =========
