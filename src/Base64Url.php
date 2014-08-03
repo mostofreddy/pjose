@@ -5,7 +5,7 @@
  * PHP version 5.4+
  *
  * Copyright (c) 2014 Federico Lozada Mosto <mosto.federico@gmail.com>
- * For the full copyright and license information, please view the LICENSE file that was distributed 
+ * For the full copyright and license information, please view the LICENSE file that was distributed
  * with this source code.
  *
  * @category  Pjose
@@ -31,9 +31,9 @@ class Base64Url
 {
     /**
      * Encode string to base 64 url safe
-     * 
+     *
      * @param string $data string to encode
-     * 
+     *
      * @return string
      */
     public static function encode($data)
@@ -42,9 +42,9 @@ class Base64Url
     }
     /**
      * Decode string
-     * 
+     *
      * @param string $data encoded string
-     * 
+     *
      * @return string
      */
     public static function decode($data)

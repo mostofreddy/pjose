@@ -33,7 +33,7 @@ class JwtTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test claims method
-     * 
+     *
      * @return void
      */
     public function testClaims()
@@ -46,13 +46,13 @@ class JwtTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Test compact method
-     * 
+     *
      * @return void
      */
     public function testCompact()
     {
         $expected = 'YnV1dQ';
-        
+
         $ref = new \ReflectionMethod('\mostofreddy\pjose\Jwt', 'compact');
         $ref->setAccessible(true);
 
@@ -73,11 +73,10 @@ class JwtTest extends \PHPUnit_Framework_TestCase
     {
         $expected = 'pjose';
         $o = new \mostofreddy\pjose\Jwt();
-        
+
         $ref = new \ReflectionMethod('\mostofreddy\pjose\Jwt', 'compact');
         $ref->setAccessible(true);
         $token = $ref->invokeArgs($o, [$expected]);
-
 
         $ref2 = new \ReflectionMethod('\mostofreddy\pjose\Jwt', 'uncompact');
         $ref2->setAccessible(true);
@@ -96,11 +95,10 @@ class JwtTest extends \PHPUnit_Framework_TestCase
     {
         $expected = ['pjose'];
         $o = new \mostofreddy\pjose\Jwt();
-        
+
         $ref = new \ReflectionMethod('\mostofreddy\pjose\Jwt', 'compact');
         $ref->setAccessible(true);
         $token = $ref->invokeArgs($o, [$expected]);
-
 
         $ref2 = new \ReflectionMethod('\mostofreddy\pjose\Jwt', 'uncompact');
         $ref2->setAccessible(true);
@@ -111,13 +109,13 @@ class JwtTest extends \PHPUnit_Framework_TestCase
 
     /**
      * Test tostring method
-     * 
+     *
      * @return void
      */
     public function testToSting()
     {
         $expected = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJub25lIn0.eyJuYW1lIjoicGpvc2UifQ.';
-        
+
         $o = new \mostofreddy\pjose\Jwt();
         $o->claims(['name' => 'pjose']);
         $result = (string) $o;

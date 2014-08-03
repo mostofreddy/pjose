@@ -5,7 +5,7 @@
  * PHP version 5.3+
  *
  * Copyright (c) 2014 Federico Lozada Mosto <mosto.federico@gmail.com>
- * For the full copyright and license information, please view the LICENSE file that was distributed 
+ * For the full copyright and license information, please view the LICENSE file that was distributed
  * with this source code.
  *
  * @category  Pjose
@@ -32,7 +32,6 @@ try {
 
     $result = $jwt->verify('secret', $token);
     var_dump($result);
-
 
 } catch (\Exception $e) {
     echo "ERROR: ".$e->getMessage().PHP_EOL;

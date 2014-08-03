@@ -93,7 +93,6 @@ class JwsTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($result);
     }
 
-
     /**
      * Test _sign method
      *
@@ -167,7 +166,6 @@ class JwsTest extends \PHPUnit_Framework_TestCase
 
         $this->assertTrue($result);
     }
-
 
     /**
      * Test verify method
