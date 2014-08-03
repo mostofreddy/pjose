@@ -33,7 +33,7 @@ class Base64UrlTest extends \PHPUnit_Framework_TestCase
 {
     /**
      * Test encode method
-     * 
+     *
      * @return void
      */
     public function testEncode()
