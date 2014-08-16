@@ -1,7 +1,7 @@
 {
     "name": "mostofreddy/pjose",
     "description": "PHP library to implements JOSE (Javascript Object Signing and Encryption)",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "keywords": [
         "JSON Web Token", "JSON Web Signature", "JSON Web Encryption",
         "JWT", "JWS", "JWE", "JOSE", "OpenID Connect", "ID Token"
@@ -13,8 +13,7 @@
         {
             "name": "Federico Lozada Mosto",
             "email": "mosto.federico@gmail.com",
-            "homepage": "http://www.mostofreddy.com.ar",
-            "role": "Lead"
+            "homepage": "http://www.mostofreddy.com.ar"
         }
     ],
     "autoload": {
