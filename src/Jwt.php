@@ -5,7 +5,7 @@
  * PHP version 5.4+
  *
  * Copyright (c) 2014 Federico Lozada Mosto <mosto.federico@gmail.com>
- * For the full copyright and license information, please view the LICENSE file that was distributed 
+ * For the full copyright and license information, please view the LICENSE file that was distributed
  * with this source code.
  *
  * @category  Pjose
@@ -43,14 +43,15 @@ class Jwt
     }
     /**
      * Set payload data
-     * 
+     *
      * @param array $claims claims
-     * 
+     *
      * @return self
      */
     public function claims(array $claims)
     {
         $this->claims = $claims;
+
         return $this;
     }
 
@@ -60,7 +61,7 @@ class Jwt
     }
     /**
      * Generate token
-     * 
+     *
      * @return string
      */
     public function encode()
@@ -77,7 +78,7 @@ class Jwt
     /**
      * Decode token
      *
-     * @param strign $token token
+     * @param  strign $token token
      * @return string
      */
     public function decode($token)
@@ -95,8 +96,8 @@ class Jwt
     }
     /**
      * Utf8 & base64url encoding
-     * 
-     * @param array|string $data data to encode 
+     *
+     * @param  array|string $data data to encode
      * @return string
      */
     protected function compact($data)
@@ -106,13 +107,14 @@ class Jwt
         }
         $data = utf8_encode($data);
         $base64url = array($this->deps['base64url'], 'encode');
+
         return $base64url($data);
     }
 
     /**
      * Utf8 & base64url encoding
-     * 
-     * @param array|string $data data to encode 
+     *
+     * @param  array|string $data data to encode
      * @return string
      */
     protected function uncompact($data)

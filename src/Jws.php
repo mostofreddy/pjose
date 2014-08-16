@@ -5,7 +5,7 @@
  * PHP version 5.4+
  *
  * Copyright (c) 2014 Federico Lozada Mosto <mosto.federico@gmail.com>
- * For the full copyright and license information, please view the LICENSE file that was distributed 
+ * For the full copyright and license information, please view the LICENSE file that was distributed
  * with this source code.
  *
  * @category  Pjose
@@ -32,9 +32,9 @@ class Jws extends Jwt
     protected $validAlgs = ['HS256', 'HS384', 'HS512'];
     /**
      * Sign generator
-     * 
-     * @param string $privatekey private key to sign
-     * @param string $alg        algorithm to encode
+     *
+     * @param  string $privatekey private key to sign
+     * @param  string $alg        algorithm to encode
      * @return string
      */
     public function sign($privatekey, $alg = 'HS256')
@@ -45,9 +45,9 @@ class Jws extends Jwt
     }
     /**
      * Verify token
-     * 
-     * @param string $privatekey private key to sign
-     * @param string $jwt        token
+     *
+     * @param  string     $privatekey private key to sign
+     * @param  string     $jwt        token
      * @throws \Exception if invalid token
      * @return bool
      */
@@ -64,29 +64,30 @@ class Jws extends Jwt
 
     /**
      * Validate algorithm
-     * 
-     * @param string $alg algorithm
+     *
+     * @param  string           $alg algorithm
      * @throws \DomainException if unknow algorithm
-     * @return boolean 
+     * @return boolean
      */
     protected function isValidAlg($alg)
     {
         if (!in_array($alg, $this->validAlgs)) {
             throw new \DomainException('Unknown algorithm: '.$alg);
         }
+
         return true;
     }
     /**
      * Sign generator
-     * 
+     *
      * @param string $privatekey private key
-     * 
+     *
      * @return string
      */
     private function signedToken($privatekey)
     {
         $sign = $this->compact($this->header).".".$this->compact($this->claims);
-        switch($this->header['alg']) {
+        switch ($this->header['alg']) {
             case 'HS256':
                 return hash_hmac('sha256', $sign, $privatekey, true);
                 break;
